@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+  --blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  --Very-dark-blue: hsl(217, 54%, 11%); /* (main BG) */
+  --Card-dark-blue: hsl(216, 50%, 16%); /* (card BG) */
+  --Line-dark-blue: hsl(215, 32%, 27%); /* (line) */
+  --White: hsl(0, 0%, 100%);
+
+  /* ## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--Very-dark-blue);
+}
+
+h1 {
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding: 1em 0;
+}
+
+h1:hover {
+  color: var(--Cyan);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--blue);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+span {
+  color: var(--White);
+}
+
+span:hover {
+  color: var(--Cyan);
+}
+
+.card {
+  width: 375px;
+  height: auto;
+  background-color: var(--Card-dark-blue);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-style: none;
+  border-radius: 1em;
+}
+
+/* Card header - image and description */
+.card__header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay__container {
+  cursor: pointer;
+  background-color: var(--Cyan);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.overlay__container:hover {
+  transition: 0.5s ease-in-out;
+}
+
+.card__image {
+  background-size: cover;
+  display: block;
+  opacity: 100%;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+  z-index: 10;
+}
+
+.card__image:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.card__description {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+/* Middle section - Etherium and clock display */
+
+.card__tracker {
+  display: flex;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--Line-dark-blue);
+}
+
+.card__time,
+.card__etherium {
+  width: 50%;
+  display: flex;
+}
+
+.card__time {
+  justify-content: end;
+}
+
+.card__clock,
+.card__etheriumicon {
+  margin-right: 10px;
+}
+
+.card__timeleft {
+  color: var(--blue);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.card__wallet {
+  color: var(--Cyan);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* last div */
+
+.card__avatar {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.card__profilepicture {
+  height: 40px;
+  border: 1px;
+  border-color: var(--White);
+  border-style: solid;
+  border-radius: 50%;
+  margin-right: 15px;
+}
